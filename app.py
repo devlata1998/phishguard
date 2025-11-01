@@ -64,9 +64,3 @@ def fetch(label):
     except Exception as e:
         traceback.print_exc()
         return jsonify({"error": str(e)}), 500
-
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    print(f"[INFO] Starting server on 0.0.0.0:{port}")
-    app.run(debug=True, host="0.0.0.0", port=port)
